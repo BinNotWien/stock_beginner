@@ -468,7 +468,7 @@ session_start();
                                     <a href='view_archive.php?id={$rows['id']}&where=archive' target='_self'>
                                         {$rows['title']}
                                     </a>
-                                </li>";
+                                </li> ";
                             }
                             ?>
                         </ol>
