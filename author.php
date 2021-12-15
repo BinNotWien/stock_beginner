@@ -95,7 +95,7 @@ session_start();
                     <a href="mailto:2089021@pcu.ac.kr">
                         <img src="./img/email_icon.jpeg" alt="">
                     </a>
-                    <a href="https://github.com/BinNotWien" target="_blank">
+                    <a href="https://github.com/BinNotWien/stock_beginner" target="_blank">
                         <img src="./img/gihub_icon.png" alt="">
                     </a>
                     <br>
