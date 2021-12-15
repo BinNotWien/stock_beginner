@@ -176,8 +176,10 @@ session_start();
                         <strong>~$ sudo apt update</strong><br>
                         <strong>~$ sudo apt upgrade</strong> <br>
                         <strong>~$ sudo apt autoremove</strong> <br>
+                        <br>
                         이후 apt를 이용하여 wget을 추가로 설치한다. <br>
                         <strong>~$ sudo apt install wget</strong><br>
+                        <br>
                         이후 다음 사이트에 들어간다. <br>
                         <a href="https://bitnami.com/stack/lamp">
                             https://bitnami.com/stack/lamp
