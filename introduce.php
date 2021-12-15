@@ -169,6 +169,75 @@ session_start();
                     </p>
                     <br>
 
+                    <h3 class="article-blog-post-title-2">LAMP 설치 가이드</h3>
+                    <hr>
+                    <p class="article-blog-post-desc" style="font-size: 1.25rem;">
+                        설치에 앞서 apt를 이용하여 우분투 시스템 패키지를 최신 버전으로 업그레이드해준다. <br>
+                        <strong>~$ sudo apt update</strong><br>
+                        <strong>~$ sudo apt upgrade</strong> <br>
+                        <strong>~$ sudo apt autoremove</strong> <br>
+                        <br>
+                        이후 apt를 이용하여 wget을 추가로 설치한다. <br>
+                        <strong>~$ sudo apt install wget</strong><br>
+                        <br>
+                        이후 다음 사이트에 들어간다. <br>
+                        <a href="https://bitnami.com/stack/lamp">
+                            https://bitnami.com/stack/lamp
+                        </a>
+                        <br>
+                        <img class="img-lamp" src="./lamp/lamp1.png">
+                        <img class="img-lamp" src="./lamp/lamp2.png">
+                        <br>
+                        꼭 root 권한으로 다음과 같은 wget 명령어를 실행한다. <br>
+                        <strong>~$ sudo wget
+                            https://bitnami.com/redirect/to/1829718/bitnami-lampstack-8.1.0-0-linux-x64-installer.run
+                        </strong>
+                        <img class="img-lamp" src="./lamp/lamp4.png">
+                        <br>
+                        실행 파일 설치가 완료되면 다음 명령어를 통해 권한을 변경한다.<br>
+                        <strong>
+                            ~$ sudo chmod 700 bitnami-lampstack-7.1.27-2-linux-x64-installer.run
+                        </strong>
+                        <br>
+                        <br>
+                        root 권한으로 설치 시 <strong>/opt/[lamp-버전]/</strong> 경로에 설치하기 위해 권한 변경을 추가로 해준 후 설치를 진행한다. <br>
+                        <strong>~$ sudo chmod 755 /opt</strong>
+                        <br>
+                        <strong>~$ sudo ./bitnami-lampstack-7.1.27-2-linux-x64-installer.run</strong>
+                        <br>
+                        <br>
+                        설치가 시작되면 몇가지 선택사항이 있는데 메모리를 절약하려면 전부 N을 입력해도 무방하다. <br>
+                        <img class="img-lamp" src="./lamp/lamp5.png">
+                        설치 경로를 지정한다. 기본값을 사용하는 경우 Enter 입력. <br>
+                        <img class="img-lamp" src="./lamp/lamp6.png">
+                        MySQL root 계정 비밀번호를 설정한다. 비밀번호 입력시에는 보이지 않으니 주의해서 입력한다. <br>
+                        <img class="img-lamp" src="./lamp/lamp7.png">
+                        비트나미 데이터베이스 root 계정의 비밀번호를 설정한다. 앞서 입력했던대로 다시 한번 입력한다. <br>
+                        <img class="img-lamp" src="./lamp/lamp8.png">
+                        y를 입력하여 비트나미 LAMP 설치를 진행한다. <br>
+                        <img class="img-lamp" src="./lamp/lamp9.png">
+                        최종적으로 y를 입력하여 비트나미 LAMP를 실행시킨다. <br>
+                        <img class="img-lamp" src="./lamp/lamp10.png">
+                        <br>
+                        <br>
+                        설치가 마무리 되었다면 ufw 명령어를 사용하여 방화벽으로 막혀 있는 80번 포트를 열어 줘야한다. <br>
+                        <strong>~$ sudo ufw disable</strong>
+                        <br>
+                        <br>
+                        최종적으로 브라우저 주소창에 127.0.0.1 혹은 localhost 를 입력하여 접속 테스트를 해본다. <br>
+                        <img class="img-lamp" src="./lamp/lamp11.png">
+                        <br>
+                        <br>
+                        서버에서 뿌려주는 디렉토리 <strong>/opt/[lamp-버전]/apache2/htdocs/</strong>
+                        <br>
+                        <br>
+                        <strong>설정 파일 경로</strong> <br>
+                        <strong>/opt/[lamp-버전]/apache2/conf/httpd.conf</strong> # 아파치 웹 서버 설정파일 <br>
+                        <strong>/opt/[lamp-버전]/php/etc/php.ini</strong> # php 설정파일 <br>
+                        <strong>/opt/[lamp-버전]/mysql/my.cnf</strong> # MySQL 설정파일 <br>
+                    </p>
+                    <br>
+
                 </article>
 
             </div>
